@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     public  Animator animator;
     public GameObject bulletPrefab;
+    public Transform firePoint;
 
     private float horizontal;
 
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && IsGrounded())
         {
             animator.SetBool("Shoot", true);
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Shoot();
         }
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            firePoint.transform.Rotate(0, 180, 0);
         }
     }
 
@@ -77,4 +79,8 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
+    private void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
 }

@@ -5,11 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 50;
+    public Rigidbody2D rb;
 
-    void Update()
+    private void Update()
     {
         transform.Translate(speed * Time.deltaTime * Vector3.right);
-        // (float * float)
-        // (Vector3 * float)
     }
 }
