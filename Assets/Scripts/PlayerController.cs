@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
     public  Animator animator;
+    public GameObject bulletPrefab;
 
     private float horizontal;
 
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && IsGrounded())
         {
             animator.SetBool("Shoot", true);
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
