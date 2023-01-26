@@ -1,4 +1,5 @@
 using Newtonsoft.Json.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -26,17 +27,6 @@ public class GameManager : MonoBehaviour
     {
         scoreComponent = FindObjectOfType<Score>();
     }
-
-    //public int GetAnimalCount()
-    //{
-    //    return _animalsCount;
-    //}
-
-    //public void SetAnimalCount(int newAnimalCount)
-    //{
-    //    _animalsCount = newAnimalCount;
-    //    CheckAnimalsCountLeft();
-    //}
 
     private void CheckEnemiesCountLeft()
     {
