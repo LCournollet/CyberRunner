@@ -25,6 +25,6 @@ public class Score : MonoBehaviour
     {
         Debug.Log("Updated score text");
 
-        scoreText.text = $"Enemies: {enemiesCount}";
+        scoreText.text = $"Level: {enemiesCount - 2}";
     }
 }

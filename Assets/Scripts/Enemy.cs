@@ -18,9 +18,8 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Enemy gets triggered");
-
-        Destroy(gameObject);
         Destroy(collision.gameObject);
+        Destroy(gameObject);
 
         _gameManager.EnemiesCount--;
     }
