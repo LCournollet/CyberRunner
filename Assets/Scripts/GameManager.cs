@@ -1,4 +1,5 @@
 using Newtonsoft.Json.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -7,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private Score scoreComponent;
 
-    private int _enemiesCount = 0;
+    private int _enemiesCount;
     public int EnemiesCount
     {
         get
