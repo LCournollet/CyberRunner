@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public Transform[] spawnPoints;
+
+    DestroyMyself destroying;
+    public List<Transform> spawnPoints;
+
     public GameObject[] enemyPrefabs;
+    public int enemyNumber = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
+        for (int i = 0; i < enemyNumber; i++)
         {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
+            int randSpawnPoint = Random.Range(0, spawnPoints.Count);
             Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
+            spawnPoints.Remove(spawnPoints[randSpawnPoint]);
         }
     }
 }
