@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public TMP_Text LevelText;
     private CharacterController characterController;
     public  Animator animator;
     public GameObject bulletPrefab;
