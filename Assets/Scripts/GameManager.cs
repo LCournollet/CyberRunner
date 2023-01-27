@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
+    public Canvas defeatUI;
     private Score scoreComponent;
 
     private int _enemiesCount;

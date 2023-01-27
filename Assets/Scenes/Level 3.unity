@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ddca7058d6074499d78362cd94ba64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defeatUI: {fileID: 2563148770224885506, guid: 781d4dbf24e69124dbb38767d5f9cd95, type: 3}
 --- !u!1 &99488167
 GameObject:
   m_ObjectHideFlags: 0
@@ -25538,7 +25539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358932390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.135383, y: 4.45, z: -10}
+  m_LocalPosition: {x: -9.134436, y: 4.45, z: -10}
   m_LocalScale: {x: 3.733333, y: 3.733333, z: 3.733333}
   m_ConstrainProportionsScale: 0
   m_Children:
