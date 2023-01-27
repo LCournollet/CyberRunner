@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int EnemyLevel = 1;
     public static int GlobalLevel;
     private PlayerController _playerController;
+    public AudioClip audioClip;
     
 
     private GameManager _gameManager;

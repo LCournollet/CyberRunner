@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
         characterController = GetComponent<CharacterController>();
         playerLevel = Random.Range(1, 20);
         Enemy.GlobalLevel = playerLevel;

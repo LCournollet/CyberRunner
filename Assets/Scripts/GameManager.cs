@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         {
             _enemiesCount = value;
             CheckEnemiesCountLeft();
-            scoreComponent.UpdateScore(_enemiesCount);
+            scoreComponent.UpdateScore();
         }
     }
 
