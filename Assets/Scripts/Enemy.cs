@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     
     public int EnemyLevel = 1;
-    public int GlobalLevel;
+    public static int GlobalLevel;
     private PlayerController _playerController;
     
 
@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        GlobalLevel = _playerController.playerLevel;
         EnemyLevel = Random.Range(_playerController.playerLevel * _gameManager.EnemiesCount, GlobalLevel);
         GlobalLevel += EnemyLevel;
 
@@ -30,10 +29,9 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy gets triggered");
         Destroy(collision.gameObject);
-        Destroy(gameObject);
         if (_playerController.playerLevel >= EnemyLevel)
         {
-            
+            Destroy(gameObject);
             _playerController.playerLevel += EnemyLevel;
             _gameManager.EnemiesCount--;
         }

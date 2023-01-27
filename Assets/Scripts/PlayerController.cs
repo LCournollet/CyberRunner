@@ -22,10 +22,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        playerLevel = Random.Range(1, 20); 
+        playerLevel = Random.Range(1, 20);
+        Enemy.GlobalLevel = playerLevel;
     }
 
     // Update is called once per frame
