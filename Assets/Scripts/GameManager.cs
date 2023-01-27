@@ -27,17 +27,6 @@ public class GameManager : MonoBehaviour
         scoreComponent = FindObjectOfType<Score>();
     }
 
-    //public int GetAnimalCount()
-    //{
-    //    return _animalsCount;
-    //}
-
-    //public void SetAnimalCount(int newAnimalCount)
-    //{
-    //    _animalsCount = newAnimalCount;
-    //    CheckAnimalsCountLeft();
-    //}
-
     private void CheckEnemiesCountLeft()
     {
         if (_enemiesCount <= 0)
