@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private float horizontal;
 
-    public int playerLevel = 1;
+    public int playerLevel;
     public int playerHP = 100;
     public float playerSpeed = 13f;
     public float jumpingPower = 22f;
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        playerLevel = Random.Range(1, 20); 
     }
 
     // Update is called once per frame
