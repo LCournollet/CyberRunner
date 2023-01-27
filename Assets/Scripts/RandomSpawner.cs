@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-
-    DestroyMyself destroying;
     public List<Transform> spawnPoints;
 
     public GameObject[] enemyPrefabs;
