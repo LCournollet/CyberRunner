@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
     public  Animator animator;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     private float horizontal;
 
-    public int playerLevel = 1;
+    public int playerLevel;
     public int playerHP = 100;
     public float playerSpeed = 13f;
     public float jumpingPower = 22f;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        playerLevel = Random.Range(1, 20); 
     }
 
     // Update is called once per frame
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && IsGrounded())
         {
             animator.SetBool("Shoot", true);
+            Shoot();
         }
         // if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         // {
@@ -67,6 +71,7 @@ public class PlayerController : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            firePoint.transform.Rotate(0, 180, 0);
         }
     }
 
@@ -75,4 +80,8 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
+    private void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
 }
