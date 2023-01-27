@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public TMP_Text LevelText;
     private CharacterController characterController;
     public  Animator animator;
     public GameObject bulletPrefab;
@@ -22,10 +24,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        playerLevel = Random.Range(1, 20); 
+        playerLevel = Random.Range(1, 20);
+        Enemy.GlobalLevel = playerLevel;
     }
 
     // Update is called once per frame
