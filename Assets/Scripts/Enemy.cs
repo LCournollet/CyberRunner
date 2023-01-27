@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    
+    public TMP_Text LevelText;
     public int EnemyLevel = 1;
     public int GlobalLevel;
     private PlayerController _playerController;
@@ -24,6 +25,7 @@ public class Enemy : MonoBehaviour
         GlobalLevel += EnemyLevel;
 
         _gameManager.EnemiesCount++;
+        LevelText.text = EnemyLevel.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
