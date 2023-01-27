@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelText: {fileID: 4765796665901954621}
   EnemyLevel: 1
-  GlobalLevel: 0
+  audioClip: {fileID: 0}
 --- !u!1 &5885709717703722217
 GameObject:
   m_ObjectHideFlags: 0

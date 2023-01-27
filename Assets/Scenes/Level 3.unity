@@ -256,7 +256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: Level 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8177384316c77bb468d0375b9541e138, type: 2}
   m_sharedMaterial: {fileID: 3536786164527782166, guid: 8177384316c77bb468d0375b9541e138, type: 2}
@@ -25430,7 +25430,7 @@ MonoBehaviour:
   - {fileID: 846821302}
   enemyPrefabs:
   - {fileID: 5760671921645567573, guid: 903ee8c08f7a3f74cbab76f9bd28f572, type: 3}
-  enemyNumber: 5
+  enemyNumber: 11
 --- !u!4 &1331856958
 Transform:
   m_ObjectHideFlags: 0
